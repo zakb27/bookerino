@@ -1,0 +1,10 @@
+.cards_container{
+    width:500px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card_img{
+    max-width:200px;
+    max-height:400px;
+}

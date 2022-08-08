@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+:root{
+    --main-color:#E5E5E5;
+    --main-color2: #E87121;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-color:  #E5E5E5;
+}
+.intro_container{
+    margin: 50px 10px;
+    border-radius: 5px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/main-reading.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:white;
+    height:40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.intro_container h1{
+    padding:50px;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.intro_container h3{
+    font-size: 1rem;
+    width:30vw;
+}
+
+
+
+.offers{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.offer_intro{
+    width:50vw;
+    padding:20px;
+}
+.offer_intro h2{
+    font-size: 2rem;
+    padding:20px;
+}
+.offer_actual{
+    padding:50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:100px;
+}
+
+.offer_card{
+    width:200px;
+    height:200px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px 50px;
+    border:1px solid var(--main-color2);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--main-color2);
+    color:white;
+}
+
+button:hover{
+    transition: 0.3s;
+    color:var(--main-color2);
+    background-color: white;
+
+}
+
+.uil{
+    font-size: 4rem;
+    color: var(--main-color2);
+}
+
+.why_container{
+    padding:50px;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.why_container img{
+    width:30%;
+    min-width: 400px;
+}
+.why_text{
+    width:30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.why_text h3{
+    font-size: 2rem;
+}
+
+footer{
+    width:100%;
+    background-color: var(--main-color2);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer a{
+    font-size: 0.8rem;
+}

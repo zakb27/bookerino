@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import logo from '../images/Bookerino-logos_white.png';
 import logo2 from '../images/Bookerino-logos_black.png';
-import {MenuItems} from "./MenuItems";
+import {MenuItems} from "../tools/MenuItems";
 import './nav_style.css'
 const Navbar = () =>{
 
@@ -17,10 +17,11 @@ const Navbar = () =>{
                         return(
                             <li key={index}>
 
-                                <a className={item.cName} href={item.url}>
+                                <a className={item.cName}  href={item.url}>
                                     <span className='text-highlight'>{item.title}</span>
                                 </a>
                             </li>
+
                         )
                     })}
                 </ul>
