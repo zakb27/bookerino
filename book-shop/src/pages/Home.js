@@ -17,32 +17,7 @@ const Home = () =>{
                 </div>
 
 
-                <div className='offers'>
-                    <div className="offer_intro">
-                        <h2>What we offer</h2>
-                        <p>Suspendisse potenti. Donec sed mi lorem. Quisque euismod, tortor
-                            non commodo malesuada, ante nibh posuere mauris
-                            , vitae bibendum augue ipsum sed tortor. Quisque sit amet est ac
-                            turpis malesuada fermentum.</p>
-                    </div>
-                    <div className="offer_actual">
-                        <div className="offer1 offer_card">
-                            <i className="uil uil-book-open"></i>
-                            <p>World class books</p>
-                        </div>
-                        <div className="offer2 offer_card">
-                            <i className="uil uil-bookmark"></i>
-                            <p>Best sorting algorithms</p>
-                        </div>
-                        <div className="offer3 offer_card">
-                            <i className="uil uil-envelope"></i>
-                            <p>The best mailing list</p>
-                        </div>
 
-                    </div>
-
-                    <button>View our latest</button>
-                </div>
 
                 <div className='why_container'>
                     <img src={image} alt=""/>
@@ -60,6 +35,32 @@ const Home = () =>{
 
             </main>
 
+            <div className='offers'>
+                <div className="offer_intro">
+                    <h2>What we offer</h2>
+                    <p>Suspendisse potenti. Donec sed mi lorem. Quisque euismod, tortor
+                        non commodo malesuada, ante nibh posuere mauris
+                        , vitae bibendum augue ipsum sed tortor. Quisque sit amet est ac
+                        turpis malesuada fermentum.</p>
+                </div>
+                <div className="offer_actual">
+                    <div className="offer1 offer_card">
+                        <i className="uil uil-book-open"></i>
+                        <p>World class books</p>
+                    </div>
+                    <div className="offer2 offer_card">
+                        <i className="uil uil-bookmark"></i>
+                        <p>Best sorting algorithms</p>
+                    </div>
+                    <div className="offer3 offer_card">
+                        <i className="uil uil-envelope"></i>
+                        <p>The best mailing list</p>
+                    </div>
+
+                </div>
+
+                <button>View our latest</button>
+            </div>
 
             <footer>
                 <a href="https://iconscout.com/illustrations/idea" target="_blank">Idea Illustration</a>

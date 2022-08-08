@@ -51,6 +51,7 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding:50px;
 }
 .offer_intro{
     width:50vw;
