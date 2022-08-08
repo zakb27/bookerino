@@ -13,18 +13,21 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/store" element={<Store />} />
-                <Route>exact
-                    path='/shop/:id'
-                    render={(props)=> (
-                        <Product
-                            {...props}
+                <Route
+                    exact
+                    path='/store'
+                    render={() => <Store/>}
+                />
+                <Route
+                    exact
+                    path='/store/:name'
+                    element=<Product
                             itemsInCart={itemsInCart}
                             cartItemCount={cartItemCount}
                             setItemsInCart={setItemsInCart}
                             setCartItemCount={setCartItemCount}
                         />
-                    )}
-                </Route>
+                />
             </Routes>
         </BrowserRouter>
     </div>

@@ -1,11 +1,4 @@
 import { v4 as uuid } from 'uuid';
-const author1 = 'Stephen King';
-const author2 = 'Jeff Kinney';
-const author3 = 'Stan Lee';
-const author4 = 'George R. R. Martin';
-const author5 = 'Tom Clancy';
-const author6 = 'Jane Austen';
-
 
 export const db = [
     {
@@ -50,7 +43,7 @@ export const db = [
     },
     {
         id: uuid(),
-        name:'Fantastic Four #505',
+        name:'Fantastic Four 505',
         author:'Stan Lee',
         genre:'Comics',
         price:500,
@@ -58,7 +51,7 @@ export const db = [
     },
     {
         id: uuid(),
-        name:'Ultimate Spider-Man #78',
+        name:'Ultimate Spider-Man 78',
         author:'Stan Lee',
         genre:'Comics',
         price:550,
@@ -66,7 +59,7 @@ export const db = [
     },
     {
         id: uuid(),
-        name:'Daredevil #85',
+        name:'Daredevil 85',
         author:'Stan Lee',
         genre:'Comics',
         price:899,
