@@ -9,11 +9,11 @@ export const MenuItems = [
         cName: 'nav-links'},
     {
         title:'About',
-        url: '#',
+        url: '/about',
         cName: 'nav-links'},
     {
         title:'Cart',
-        url: '#',
+        url: '/cart',
         cName: 'nav-links'},
 
 ]
