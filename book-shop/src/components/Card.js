@@ -1,13 +1,14 @@
 import React from "react";
 
 const Card = ({name,author,price,img}) =>{
-    price = price/100
+
     return(
-        <div>
+        <div className='link_container'>
             <img src={img} alt={name} className='card_img'/>
-            <h3>{name}</h3>
-            <h4>{author}</h4>
-            <h3>£{price}</h3>
+            <div className="link_text">
+                <h3><span className='card_highlight'>{name}</span></h3>
+                <h5>£ {(parseInt(price)/100).toFixed(2)}</h5>
+            </div>
         </div>
     )
 }

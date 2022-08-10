@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 :root{
     --main-color:#E5E5E5;
-    --main-color2: #E87121;
+    --main-color2: rgba(0, 0, 0, 0.77);
 
 }
 
@@ -25,7 +25,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     height:80px;
-    background-color: #E87121;
+    background-color: rgba(0, 0, 0, 0.77);
     box-shadow: 0 4px 2px -2px gray;
     width:100%;
 
@@ -84,3 +84,7 @@ a{
     border-bottom: 2px solid black;
 }
 
+.uil-shopping-cart{
+    color:white !important;
+    font-size: 1.3rem !important;
+}

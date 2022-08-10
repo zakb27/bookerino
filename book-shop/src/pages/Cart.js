@@ -15,9 +15,12 @@ const Cart = ({
               }) =>{
     console.log(itemsInCart);
     return(<div>
-        <NavBar />
-
-        <p>{itemsInCart}</p>
+        <NavBar cartItemCount={cartItemCount}/>
+        {itemsInCart.map((item,index) =>{
+            return(<div key={index}>
+                {item.name} + {item.quantity}
+            </div>)
+        })}
     </div>)
 }
 

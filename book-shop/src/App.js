@@ -4,8 +4,8 @@ import Home from './pages/Home'
 import Store from './pages/Store'
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
-
-function App() {
+import About from "./pages/About";
+const App = () =>{
 
     const [itemsInCart, setItemsInCart] = useState([]);
     const [cartItemCount, setCartItemCount] = useState(0);
@@ -15,7 +15,16 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home cartItemCount={cartItemCount}/>} />
-                    <Route path="/store" element={<Store cartItemCount={cartItemCount}/>} />
+                    <Route
+                        exact
+                        path='/store/'
+                        element={<Store
+                            itemsInCart={itemsInCart}
+                            cartItemCount={cartItemCount}
+                            setItemsInCart={setItemsInCart}
+                            setCartItemCount={setCartItemCount}
+                        />}
+                    />
                     <Route
                         exact
                         path='/store/:name'
@@ -26,6 +35,17 @@ function App() {
                             setCartItemCount={setCartItemCount}
                         />}
                     />
+                    <Route
+                        exact
+                        path='/about'
+                        element={<About
+                            itemsInCart={itemsInCart}
+                            cartItemCount={cartItemCount}
+                            setItemsInCart={setItemsInCart}
+                            setCartItemCount={setCartItemCount}
+                        />}
+                    />
+
                     <Route
                         exact
                         path='/cart'

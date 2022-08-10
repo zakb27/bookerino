@@ -3,10 +3,10 @@ import './home.css'
 import image from '../images/idea.png'
 
 import {db} from '../tools/db'
-const Home = () =>{
+const Home = ({cartItemCount}) =>{
     return(
         <div>
-            <NavBar />
+            <NavBar cartItemCount ={cartItemCount}/>
             <main>
                 <div className="intro_container">
 

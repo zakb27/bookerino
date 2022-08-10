@@ -1,20 +1,25 @@
-.shop_container{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 
+.display_container{
+    display:flex;
+    width:100%;
+    background-color: cadetblue;
+    justify-content: center;
+    background-color: var(--main-color);
+}
 .cards_container{
-    width:40%;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
+
+    margin: 20px auto;
     align-self: center;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #E87121;
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
     gap:10px;
 }
+
+
 .card_img{
     width:200px;
     height:300px;
@@ -22,11 +27,45 @@
 
 
 .cards_container li{
-    width:40%;
+    padding:10px;
+
+    width:100%;
     background-color: white;
     color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
-.cards_container li a{
-    padding:0px;
-    color: black;
+
+
+
+.link_text{
+    width:300px;
+    height:75px;
+    color:black;
+
+}
+
+.link_text h5{
+    text-align: start;
+}
+
+.link_container:hover .card_highlight{
+    border-bottom: 2px solid black;
+}
+
+.quick_button{
+    font-weight: 400;
+    border-radius: 1px;
+    width:80%;
+    background-color: rgba(0, 0, 0, 0.77);
+    border: 1px sold var(--main-color)
+}
+
+.quick_button:hover{
+    color: rgba(0, 0, 0, 0.77);
+    background-color: var(--main-color);
 }

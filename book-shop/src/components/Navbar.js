@@ -3,8 +3,10 @@ import logo from '../images/Bookerino-logos_white.png';
 import logo2 from '../images/Bookerino-logos_black.png';
 import {MenuItems} from "../tools/MenuItems";
 import './nav_style.css'
-const Navbar = () =>{
-
+import {NavLink} from "react-router-dom";
+import { Link } from "react-router-dom";
+import {db} from "../tools/db";
+const Navbar = ({cartItemCount =0}) =>{
     return (
         <header>
             <nav className={'NavbarItems'}>
@@ -16,14 +18,28 @@ const Navbar = () =>{
                     {MenuItems.map((item,index) =>{
                         return(
                             <li key={index}>
-
-                                <a className={item.cName}  href={item.url}>
+                                <Link
+                                    as={NavLink}
+                                    to={item.url}
+                                    className={item.cName}
+                                >
                                     <span className='text-highlight'>{item.title}</span>
-                                </a>
+                                </Link>
                             </li>
 
                         )
                     })}
+                    <li>
+                        <Link
+                            as={NavLink}
+                            to='/cart'
+                            className='nav-links'
+                        >
+                            <span className='text-highlight'><i className="uil uil-shopping-cart"></i>
+                                {cartItemCount.toString()}</span>
+                        </Link>
+                    </li>
+
                 </ul>
             </nav>
         </header>
