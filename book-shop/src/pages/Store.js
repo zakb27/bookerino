@@ -12,10 +12,35 @@ const Store = ({
                    setCartItemCount
                }) =>{
 
+
+    const checkExists = (item) =>{
+        let exists = false;
+        itemsInCart.find(element=>{
+            exists=(element.id===item.id);
+        })
+        return exists;
+    }
+
     const addItem = (event,item) =>{
-        alert(item.name + " has been added to your cart");
-        setItemsInCart([...itemsInCart,{...item,quantity:1}]);
-        setCartItemCount(cartItemCount+1);
+        alert("Added to cart")
+        if(checkExists(item)){
+            console.log("NOW WHAT")
+            setItemsInCart(current =>
+                current.map(obj => {
+                    if (obj.id === item.id) {
+                        return {...obj,quantity: obj.quantity+1};
+                    }
+
+                    return obj;
+                }),
+            );
+            setCartItemCount(cartItemCount+1);
+        }
+        else {
+            console.log(checkExists(item))
+            setItemsInCart([...itemsInCart, {...item, quantity: 1}]);
+            setCartItemCount(cartItemCount + 1);
+        }
     }
 
     return(

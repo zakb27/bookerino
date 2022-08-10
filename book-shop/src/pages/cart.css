@@ -1,0 +1,9 @@
+.styled-table{
+    width:80%;
+    background-color: white;
+}
+thead{
+    background-color: rgba(0, 0, 0, 0.16);
+    padding: 20px;
+    margin:0;
+}

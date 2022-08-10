@@ -21,10 +21,34 @@ const Product = ({
     let params = useParams();
     const item = (GetItem(params));
 
+    const checkExists = (item) =>{
+        let exists = false;
+        itemsInCart.find(element=>{
+            exists=(element.id===item.id);
+        })
+        return exists;
+    }
+
     const addToCart = () =>{
         alert("Added to cart")
-        setItemsInCart([...itemsInCart,{...item,quantity:parseInt(numberOfItems)}]);
-        setCartItemCount(cartItemCount+parseInt(numberOfItems));
+        if(checkExists(item)){
+            console.log("NOW WHAT")
+            setItemsInCart(current =>
+                current.map(obj => {
+                    if (obj.id === item.id) {
+                        return {...obj,quantity: obj.quantity+parseInt(numberOfItems)};
+                    }
+
+                    return obj;
+                }),
+            );
+            setCartItemCount(cartItemCount+parseInt(numberOfItems));
+        }
+        else {
+            console.log(checkExists(item))
+            setItemsInCart([...itemsInCart, {...item, quantity: parseInt(numberOfItems)}]);
+            setCartItemCount(cartItemCount + parseInt(numberOfItems));
+        }
     }
 
     const findRelated = () =>{
@@ -49,16 +73,24 @@ const Product = ({
 
                 <img src={item.img} alt="Image of book"/>
                 <div className='book_details'>
-                    <h2>{item.name}</h2>
-                    <h5>by {item.author}</h5>
-                    <h3>£ {(parseInt(item.price)/100).toFixed(2)}</h3>
+                    <div>
+                        <h2>{item.name}</h2>
+                        <h5>by {item.author}</h5>
+                    </div>
+                    <div>
+                        <h3>£ {(parseInt(item.price) / 100).toFixed(2)}</h3>
+                    </div>
                     <input type="number" value = {numberOfItems} onChange={handleChange}/>
                     <button onClick={addToCart}>Add to cart</button>
-                    <Link as={NavLink} to={'/store'}><button>Go back</button></Link>
+                    <Link as={NavLink} to={'/store'}><button className='go_back'><i className="uil uil-arrow-left"></i></button></Link>
                 </div>
             </div>
 
             <div className="description">
+                <div className="titles_container">
+                <h3><span className='text-highlight'>Description</span></h3>
+                <h3><span className='text-highlight2'>Reviews(0)</span></h3>
+                </div>
                 <p>Nam et complectitur verbis, quod vult, et dicit plane, quod intellegam. Quaerimus enim finem bonorum.
                     Illum mallem levares, quo optimum atque humanissimum virum, Cn. Cum sciret confestim esse moriendum
                     eamque mortem ardentiore studio peteret, quam Epicurus voluptatem petendam putat. Inde sermone vario
@@ -67,8 +99,9 @@ const Product = ({
                     subway tile. Vaporware ugh 90’s in sriracha tempor yr beard iceland sustainable.</p>
             </div>
 
-            <div className="related">
+            <div className="related_container">
                 <h2>Related</h2>
+                <div className="related">
                 {findRelated().map((item,index) =>{
                     return(<Link
                         as={NavLink}
@@ -78,9 +111,9 @@ const Product = ({
                         key={item.id}
                     >
                         <img src={item.img} alt="Related things"/>
-                        {item.name}
                     </Link>)
                 })}
+                </div>
             </div>
 
         </div>);

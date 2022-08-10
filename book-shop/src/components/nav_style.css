@@ -63,9 +63,11 @@ ul{
 }
 .nav-links{
     padding: 30px;
+    transition: 0.3s all 0ms;
 }
 .nav-links:hover{
     color: black;
+
 }
 
 a{
@@ -78,10 +80,12 @@ a{
 }
 .text-highlight{
     border-bottom: 2px solid white;
+
 }
 
 .nav-links:hover .text-highlight{
     border-bottom: 2px solid black;
+
 }
 
 .uil-shopping-cart{

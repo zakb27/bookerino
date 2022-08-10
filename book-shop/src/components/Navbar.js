@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import logo from '../images/Bookerino-logos_white.png';
 import logo2 from '../images/Bookerino-logos_black.png';
 import {MenuItems} from "../tools/MenuItems";
 import './nav_style.css'
 import {NavLink} from "react-router-dom";
 import { Link } from "react-router-dom";
-import {db} from "../tools/db";
 const Navbar = ({cartItemCount =0}) =>{
     return (
         <header>

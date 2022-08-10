@@ -13,6 +13,7 @@ const About = ({
 }) => {
     return(<div>
         <NavBar cartItemCount={cartItemCount}/>
+        <h1>COMING SOON UNDER CONSTRUCTION</h1>
     </div>)
 }
 

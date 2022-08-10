@@ -55,6 +55,7 @@
 
 .link_container:hover .card_highlight{
     border-bottom: 2px solid black;
+
 }
 
 .quick_button{
@@ -62,7 +63,8 @@
     border-radius: 1px;
     width:80%;
     background-color: rgba(0, 0, 0, 0.77);
-    border: 1px sold var(--main-color)
+    border: 1px sold var(--main-color);
+
 }
 
 .quick_button:hover{

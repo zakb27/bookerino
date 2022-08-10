@@ -1,12 +1,8 @@
 import NavBar from '../components/Navbar'
-import {db} from '../tools/db'
 import React, { useState } from 'react'
-import Card from '../components/Card'
 import {Link, useParams} from "react-router-dom";
-import {GetItem} from '../components/GetItem'
-import { useLocation } from 'react-router-dom';
-
-
+import {NavLink} from "react-router-dom";
+import './cart.css'
 const Cart = ({
                   itemsInCart,
                   cartItemCount,
@@ -14,13 +10,55 @@ const Cart = ({
                   setCartItemCount
               }) =>{
     console.log(itemsInCart);
+
+
+    const removeItem = (event,item) =>{
+        setCartItemCount(cartItemCount - item.quantity);
+        setItemsInCart([...itemsInCart.filter((el) => el.id !== item.id)])
+    }
+
+    const calculateSubPrice = (item) =>{
+        return (((item.price*item.quantity) / 100).toFixed(2));
+    }
+
     return(<div>
         <NavBar cartItemCount={cartItemCount}/>
-        {itemsInCart.map((item,index) =>{
-            return(<div key={index}>
-                {item.name} + {item.quantity}
-            </div>)
-        })}
+        <h1>Your cart</h1>
+        <table className="styled-table">
+            <thead><tr>
+                <th>&nbsp;</th>
+                <th>Book</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>&nbsp;</th>
+            </tr></thead>
+            <tbody>
+            {itemsInCart.map((item,index) =>{
+                return(
+                    <tr key={index}>
+                        <td>
+                            <img src={item.img} alt=""/>
+                        </td>
+                        <td>
+                            <Link as={NavLink} to={{pathname: `/store/${item.name}`}}>{item.name}</Link>
+                        </td>
+                        <td>
+                            £ {((item.price*item.quantity) / 100).toFixed(2)}
+                        </td>
+                        <td>
+                            {item.quantity}
+                        </td>
+                        <td>
+                            £ {calculateSubPrice(item)}
+                        </td>
+                        <button className='remove'onClick={event =>removeItem(event,item)}  ><i className="uil uil-trash-alt"></i></button>
+
+                </tr>
+                )
+            })}
+            </tbody>
+        </table>
     </div>)
 }
 
