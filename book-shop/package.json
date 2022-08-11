@@ -1,7 +1,7 @@
 {
   "name": "book-shop",
   "version": "0.1.0",
-  "homepage": "https://zakb27.github.io/Store",
+  "homepage": "https://zakb27.github.io/bookerino/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

@@ -108,7 +108,7 @@ const Product = ({
                     return(<Link
                         as={NavLink}
                         to={{
-                            pathname: `/store/${item.name}`
+                            pathname: `/shop/${item.name}`
                         }}
                         key={item.id}
                     >

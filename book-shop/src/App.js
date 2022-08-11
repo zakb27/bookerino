@@ -23,7 +23,7 @@ const App = () =>{
                     <Route path="/" element={<Home cartItemCount={cartItemCount}/>} />
                     <Route
                         exact
-                        path='/store/'
+                        path='/shop/'
                         element={<Store
                             itemsInCart={itemsInCart}
                             cartItemCount={cartItemCount}
@@ -33,7 +33,7 @@ const App = () =>{
                     />
                     <Route
                         exact
-                        path='/store/:name'
+                        path='/shop/:name'
                         element={<Product
                             itemsInCart={itemsInCart}
                             cartItemCount={cartItemCount}
