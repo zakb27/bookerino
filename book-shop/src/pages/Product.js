@@ -10,7 +10,8 @@ const Product = ({
                      itemsInCart,
                      cartItemCount,
                      setItemsInCart,
-                     setCartItemCount
+                     setCartItemCount,
+                     changeCart
                  }
                  ) =>{
 
@@ -42,13 +43,13 @@ const Product = ({
                     return obj;
                 }),
             );
-            setCartItemCount(cartItemCount+parseInt(numberOfItems));
         }
         else {
             console.log(checkExists(item))
             setItemsInCart([...itemsInCart, {...item, quantity: parseInt(numberOfItems)}]);
-            setCartItemCount(cartItemCount + parseInt(numberOfItems));
+
         }
+        changeCart();
     }
 
     const findRelated = () =>{
@@ -63,6 +64,7 @@ const Product = ({
 
     const handleChange = (event) =>{
         setItems(event.target.value);
+        changeCart();
     }
 
     return(

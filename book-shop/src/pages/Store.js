@@ -9,7 +9,8 @@ const Store = ({
                    itemsInCart,
                    cartItemCount,
                    setItemsInCart,
-                   setCartItemCount
+                   setCartItemCount,
+                   changeCart
                }) =>{
 
 
@@ -34,12 +35,12 @@ const Store = ({
                     return obj;
                 }),
             );
-            setCartItemCount(cartItemCount+1);
+            changeCart();
         }
         else {
             console.log(checkExists(item))
             setItemsInCart([...itemsInCart, {...item, quantity: 1}]);
-            setCartItemCount(cartItemCount + 1);
+            changeCart();
         }
     }
 

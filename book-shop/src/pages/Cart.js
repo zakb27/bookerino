@@ -7,20 +7,27 @@ const Cart = ({
                   itemsInCart,
                   cartItemCount,
                   setItemsInCart,
-                  setCartItemCount
+                  setCartItemCount,
+                  changeCart,
               }) =>{
-    console.log(itemsInCart);
 
 
     const removeItem = (event,item) =>{
-        setCartItemCount(cartItemCount - item.quantity);
         setItemsInCart([...itemsInCart.filter((el) => el.id !== item.id)])
+        changeCart();
     }
 
     const calculateSubPrice = (item) =>{
-        return (((item.price*item.quantity) / 100).toFixed(2));
+        return (((item.price*item.quantity) / 100));
     }
 
+    const calculateTotalPrice = ()=>{
+        let total=0;
+        for (let i=0;i<itemsInCart.length;i++){
+            total = total+ calculateSubPrice(itemsInCart[i]);
+        }
+        return total;
+    }
 
     const updateCart = (event,item) =>{
             if(event.target.value) {
@@ -31,12 +38,14 @@ const Cart = ({
                         if (obj.id === item.id) {
                             inst= obj.quantity;
                             return {...obj, quantity: parseInt(event.target.value)};
+
+
                         }
 
                         return obj;
                     }),
                 );
-                setCartItemCount(cartItemCount + (inst-parseInt(event.target.value)));
+                changeCart();
             }
         }
 
@@ -73,7 +82,7 @@ const Cart = ({
                                 updateCart(e,item)} min='1' required/>
                         </td>
                         <td>
-                            £ {calculateSubPrice(item)}
+                            £ {calculateSubPrice(item).toFixed(2)}
                         </td>
                         <button className='remove'onClick={event =>removeItem(event,item)}  ><i className="uil uil-trash-alt"></i></button>
 
@@ -82,6 +91,11 @@ const Cart = ({
             })}
             </tbody>
         </table>
+        <div className='checkout'>
+        <h3>Total</h3>
+        <h4>£{calculateTotalPrice().toFixed(2)}</h4>
+        <button onClick={(e)=>{window.location.reload();}}>Checkout</button>
+        </div>
     </div>);
 }
 

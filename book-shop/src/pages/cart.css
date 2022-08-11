@@ -46,3 +46,15 @@ td{
     transition: 0s;
     color:white;
 }
+
+.checkout {
+    text-align: center;
+}
+.checkout h3{
+    font-size: 2rem;
+}
+.checkout h4{
+    font-size: 1.7rem;
+}
+
+

@@ -10,6 +10,12 @@ const App = () =>{
     const [itemsInCart, setItemsInCart] = useState([]);
     const [cartItemCount, setCartItemCount] = useState(0);
     console.log(itemsInCart);
+
+    const changeCart=() =>{
+        setCartItemCount(itemsInCart.length)
+        console.log(itemsInCart.length);
+    }
+
     return (
         <div className="App">
             <BrowserRouter>
@@ -33,6 +39,7 @@ const App = () =>{
                             cartItemCount={cartItemCount}
                             setItemsInCart={setItemsInCart}
                             setCartItemCount={setCartItemCount}
+                            changeCart={changeCart}
                         />}
                     />
                     <Route
@@ -43,6 +50,7 @@ const App = () =>{
                             cartItemCount={cartItemCount}
                             setItemsInCart={setItemsInCart}
                             setCartItemCount={setCartItemCount}
+                            changeCart={changeCart}
                         />}
                     />
 
@@ -54,6 +62,7 @@ const App = () =>{
                             cartItemCount={cartItemCount}
                             setItemsInCart={setItemsInCart}
                             setCartItemCount={setCartItemCount}
+                            changeCart={changeCart}
                         />}
                     />
 

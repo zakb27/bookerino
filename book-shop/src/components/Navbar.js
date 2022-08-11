@@ -34,8 +34,8 @@ const Navbar = ({cartItemCount =0}) =>{
                             to='/cart'
                             className='nav-links'
                         >
-                            <span className='text-highlight'><i className="uil uil-shopping-cart"></i>
-                                {cartItemCount.toString()}</span>
+                            <span className='text-highlight'><i className="uil uil-shopping-cart"></i></span>
+                                {/*{cartItemCount.toString()}*/}
                         </Link>
                     </li>
 
