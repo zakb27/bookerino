@@ -21,7 +21,29 @@ const Cart = ({
         return (((item.price*item.quantity) / 100).toFixed(2));
     }
 
-    return(<div>
+
+    const updateCart = (event,item) =>{
+            if(event.target.value) {
+                let inst=0;
+
+                setItemsInCart(current =>
+                    current.map(obj => {
+                        if (obj.id === item.id) {
+                            inst= obj.quantity;
+                            return {...obj, quantity: parseInt(event.target.value)};
+                        }
+
+                        return obj;
+                    }),
+                );
+                setCartItemCount(cartItemCount + (inst-parseInt(event.target.value)));
+            }
+        }
+
+
+
+
+    return(<div className='cart_container'>
         <NavBar cartItemCount={cartItemCount}/>
         <h1>Your cart</h1>
         <table className="styled-table">
@@ -36,7 +58,7 @@ const Cart = ({
             <tbody>
             {itemsInCart.map((item,index) =>{
                 return(
-                    <tr key={index}>
+                    <tr key={index} className='cart_row'>
                         <td>
                             <img src={item.img} alt=""/>
                         </td>
@@ -44,10 +66,11 @@ const Cart = ({
                             <Link as={NavLink} to={{pathname: `/store/${item.name}`}}>{item.name}</Link>
                         </td>
                         <td>
-                            £ {((item.price*item.quantity) / 100).toFixed(2)}
+                            £ {((item.price) / 100).toFixed(2)}
                         </td>
                         <td>
-                            {item.quantity}
+                            <input type="number" value = {item.quantity} onChange={(e)=>
+                                updateCart(e,item)} min='1' required/>
                         </td>
                         <td>
                             £ {calculateSubPrice(item)}
@@ -59,7 +82,7 @@ const Cart = ({
             })}
             </tbody>
         </table>
-    </div>)
+    </div>);
 }
 
 export default Cart;

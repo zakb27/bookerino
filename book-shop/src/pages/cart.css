@@ -1,9 +1,48 @@
+
 .styled-table{
     width:80%;
     background-color: white;
+    margin: 0 auto;
+    text-align: center;
+
 }
-thead{
-    background-color: rgba(0, 0, 0, 0.16);
-    padding: 20px;
-    margin:0;
+thead tr{
+    width:100%;
+
+}
+
+tbody tr{
+
+}
+
+td a{
+    color:black;
+}
+td a:hover{
+    border-bottom: 1px solid black;
+}
+
+td img{
+    width:100px;
+    height:150px;
+}
+
+td{
+   margin:0 auto;
+}
+.remove{
+    padding:10px 15px;
+    border: 1px solid #E5E5E5;
+    background-color: #E5E5E5;
+    margin-top: 50px;
+}
+
+.remove .uil{
+    font-size: 1.5rem;
+    color: black;
+}
+.remove:hover,.remove:hover .uil{
+    background-color: #be3131;
+    transition: 0s;
+    color:white;
 }

@@ -1,8 +1,6 @@
 import NavBar from '../components/Navbar'
 import './home.css'
 import image from '../images/idea.png'
-
-import {db} from '../tools/db'
 const Home = ({cartItemCount}) =>{
     return(
         <div>
