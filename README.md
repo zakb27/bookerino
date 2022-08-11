@@ -1,7 +1,9 @@
 # Store front
 
 This is a store front made in react with emphasis on interactive ui, e.g. has updating cart.
+Note(Github pages is buggy with checkout button)
 Viewable at https://zakb27.github.io/bookerino/
+
 
 ## Screenshots
 
