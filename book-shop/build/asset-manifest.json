@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Store/static/css/main.4e47aadd.css",
+    "main.js": "/Store/static/js/main.c0360f52.js",
+    "static/media/main-reading.jpeg": "/Store/static/media/main-reading.5617251cf3d8e76662ce.jpeg",
+    "static/media/idea.png": "/Store/static/media/idea.018d6ca593114acc1ca9.png",
+    "static/media/Bookerino-logos_white.png": "/Store/static/media/Bookerino-logos_white.ff82e805e8a27e718300.png",
+    "static/media/Bookerino-logos_black.png": "/Store/static/media/Bookerino-logos_black.c679bdf17eae59b32194.png",
+    "index.html": "/Store/index.html",
+    "main.4e47aadd.css.map": "/Store/static/css/main.4e47aadd.css.map",
+    "main.c0360f52.js.map": "/Store/static/js/main.c0360f52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e47aadd.css",
+    "static/js/main.c0360f52.js"
+  ]
+}
