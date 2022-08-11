@@ -56,7 +56,7 @@ const Store = ({
                                 <Link
                                     as={NavLink}
                                     to={{
-                                        pathname: `/shop/${item.name}`,
+                                        pathname: `/bookerino/shop/${item.name}`,
                                         state: { currentItem: item, all: db },
                                     }}
                                     key={item.id}

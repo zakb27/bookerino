@@ -72,7 +72,7 @@ const Cart = ({
                             <img src={item.img} alt=""/>
                         </td>
                         <td>
-                            <Link as={NavLink} to={{pathname: `/shop/${item.name}`}}>{item.name}</Link>
+                            <Link as={NavLink} to={{pathname: `/bookerino/shop/${item.name}`}}>{item.name}</Link>
                         </td>
                         <td>
                             £ {((item.price) / 100).toFixed(2)}

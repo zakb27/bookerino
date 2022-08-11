@@ -31,7 +31,7 @@ const Navbar = ({cartItemCount =0}) =>{
                     <li>
                         <Link
                             as={NavLink}
-                            to='/cart'
+                            to='/bookerino/cart'
                             className='nav-links'
                         >
                             <span className='text-highlight'><i className="uil uil-shopping-cart"></i></span>

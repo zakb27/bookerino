@@ -1,15 +1,15 @@
 export const MenuItems = [
     {
         title:'Home',
-        url: '/',
+        url: '/bookerino/',
         cName: 'nav-links'},
     {
         title:'Shop',
-        url: '/shop',
+        url: '/bookerino/shop',
         cName: 'nav-links'},
     {
         title:'About',
-        url: '/about',
+        url: '/bookerino/about',
         cName: 'nav-links'},
 
 ]

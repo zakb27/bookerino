@@ -84,7 +84,7 @@ const Product = ({
                     </div>
                     <input type="number" value = {numberOfItems} onChange={handleChange}/>
                     <button onClick={addToCart}>Add to cart</button>
-                    <Link as={NavLink} to={'/store'}><button className='go_back'><i className="uil uil-arrow-left"></i></button></Link>
+                    <Link as={NavLink} to={'/bookerino/store'}><button className='go_back'><i className="uil uil-arrow-left"></i></button></Link>
                 </div>
             </div>
 
@@ -108,7 +108,7 @@ const Product = ({
                     return(<Link
                         as={NavLink}
                         to={{
-                            pathname: `/shop/${item.name}`
+                            pathname: `/bookerino/shop/${item.name}`
                         }}
                         key={item.id}
                     >

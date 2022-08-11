@@ -20,10 +20,10 @@ const App = () =>{
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home cartItemCount={cartItemCount}/>} />
+                    <Route path="/bookerino" element={<Home cartItemCount={cartItemCount}/>} />
                     <Route
                         exact
-                        path='/shop/'
+                        path='/bookerino/shop/'
                         element={<Store
                             itemsInCart={itemsInCart}
                             cartItemCount={cartItemCount}
@@ -33,7 +33,7 @@ const App = () =>{
                     />
                     <Route
                         exact
-                        path='/shop/:name'
+                        path='/bookerino/shop/:name'
                         element={<Product
                             itemsInCart={itemsInCart}
                             cartItemCount={cartItemCount}
@@ -44,7 +44,7 @@ const App = () =>{
                     />
                     <Route
                         exact
-                        path='/about'
+                        path='/bookerino/about'
                         element={<About
                             itemsInCart={itemsInCart}
                             cartItemCount={cartItemCount}
@@ -56,7 +56,7 @@ const App = () =>{
 
                     <Route
                         exact
-                        path='/cart'
+                        path='/bookerino/cart'
                         element={<Cart
                             itemsInCart={itemsInCart}
                             cartItemCount={cartItemCount}
