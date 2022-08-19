@@ -1,6 +1,6 @@
 # Store front
 
-This is a store front made in react with emphasis on interactive ui, e.g. has updating cart.
+This is a store front made in react with emphasis on interactive ui, e.g. has updating cart. Current page's display is more of a placeholder and more needs to be done to look nicer.
 
 Note-----(Github pages is buggy with checkout button)
 
