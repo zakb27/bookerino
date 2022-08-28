@@ -11,7 +11,7 @@ Viewable at https://zakb27.github.io/bookerino/
 
 <img width="1918" alt="Screenshot 2022-08-11 at 17 08 37" src="https://user-images.githubusercontent.com/46377498/184180038-f2846bc1-3e0b-473f-bd29-ed319efd35f2.png">
 
-<img width="1511" alt="Screenshot 2022-08-11 at 17 09 02" src="https://user-images.githubusercontent.com/46377498/184180055-d5c7b5e6-19bf-44e3-95d3-149c7e9fce6e.png">
+
 
 
 <img width="1923" alt="Screenshot 2022-08-11 at 17 10 26" src="https://user-images.githubusercontent.com/46377498/184180071-4f466926-ac00-4ea3-9b94-a55c55fb3fa7.png">
